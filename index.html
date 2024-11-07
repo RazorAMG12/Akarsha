@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+    }
+
+    /* Login Form Styles */
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    input[type="text"], button {
+        padding: 10px;
+        margin: 10px 0;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    /* I Love You Page Styles */
+    .love-page {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #ff69b4;
+        font-size: 3em;
+    }
+</style>
+</head>
+<body>
+    <!-- Login Form -->
+    <div class="login-container" id="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Enter Username">
+        <button onclick="checkLogin()">Log In</button>
+    </div>
+
+    <!-- I Love You Page -->
+    <div class="love-page" id="love-page">
+        <p>I love you</p>
+    </div>
+
+<script>
+    function checkLogin() {
+        const username = document.getElementById("username").value;
+        if (username === "Akarsha") {
+            document.getElementById("login-container").style.display = "none";
+            document.getElementById("love-page").style.display = "flex";
+        } else {
+            alert("Incorrect Username! Please try again.");
+        }
+    }
+</script>
+</body>
+</html>
